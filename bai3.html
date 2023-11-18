@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+
+<p id="inputArr"></p>
+<br>
+<p id="result"></p>
+
+
+
+<script>
+    let arr = [];
+    let num = +prompt("nhap so luong phan tu");
+    for (let i = 0; i < num; i++) {
+        arr[i] = +prompt("nhap phan tu thu "+ (i+1));
+    }
+    document.getElementById("inputArr").innerText = "Mang da nhap " + arr.join();
+
+    let total = 0;
+
+    function isPrime(n) {
+        let checkPrime = true;
+        if (n<2){
+            checkPrime = false;
+        } else if (n>3) {
+            for (let i = 2; i < n; i++) {
+                if (n%i == 0) {
+                    checkPrime = false;
+                    break;
+                }
+            }
+        }
+        return checkPrime;
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        if (isPrime(arr[i])){
+            total += arr[i];
+        }
+    }
+
+    document.getElementById("result").innerText = "tong cac so nguyen to la " + total;
+
+
+</script>
+
+
+
+</body>
+</html>

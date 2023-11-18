@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+
+<p id="inputArr"></p> <br>
+<input type="text" id="checkValue" placeholder="nhap gia tri can tim"><br>
+<button type="button" onclick="checkNum()">Check</button>
+<p id="result"></p>
+
+<script>
+    let arr = [];
+    let num = +prompt("nhap so luong phan tu");
+    for (let i = 0; i < num; i++) {
+        arr[i] = +prompt("nhap phan tu thu "+ (i+1));
+    }
+
+    document.getElementById("inputArr").innerText = "Mang da nhap " + arr.join();
+    function checkNum() {
+        let value = +document.getElementById("checkValue").value;
+        let count =0;
+        for (let i = 0; i < num; i++) {
+            if (arr[i] == value) {
+                count +=1;
+            }
+        }
+        document.getElementById("result").innerText = "so luong la " + count;
+
+    }
+
+</script>
+
+
+</body>
+</html>

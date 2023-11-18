@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+
+
+<script>
+    let arr = [];
+    let num = +prompt("nhap so luong phan tu");
+    for (let i = 0; i < num; i++) {
+        arr[i] = +prompt("nhap phan tu thu "+ (i+1));
+    }
+
+    let count = 0;
+    for (let i = 0; i < num; i++) {
+        if (arr[i]%2==0) {
+            count +=1;
+        }
+    }
+    document.write("Mang da nhap " + arr.join() + "<br>");
+    document.write("So luong so chan trong mang la " + count);
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
